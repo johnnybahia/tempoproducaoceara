@@ -179,6 +179,8 @@ function registrarAlerta(ss, dataStr, horaStr, maquina, evento, duracao) {
     var ultima = sheet.getLastRow();
     sheet.getRange(ultima, 1, 1, 6).setBackground("#fce8e6");
 
+    // Envio de e-mail de alerta de sensor travado desativado
+    /*
     try {
       var sheetEmail = ss.getSheetByName("EMAIL");
       if (sheetEmail) {
@@ -217,6 +219,7 @@ function registrarAlerta(ss, dataStr, horaStr, maquina, evento, duracao) {
     } catch (emailErr) {
       console.error("Erro ao enviar e-mail de alerta: " + emailErr.message);
     }
+    */
 
   } catch (error) {
     console.error("Erro em registrarAlerta: " + error.message);
